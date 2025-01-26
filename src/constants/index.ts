@@ -681,7 +681,7 @@ export const OUR_CURRENT_LEADS = [
   {
     image: "/Current_Leads/priyanshu.jpg",
     name: "Priyanshu Raj",
-    domain: "Social",
+    domain: "Lead Socials",
     message: "",
     facebook: "",
     github: "https://github.com/Priyanshu01raj01",
@@ -691,7 +691,7 @@ export const OUR_CURRENT_LEADS = [
   {
     image: "/Current_Leads/kanishk.jpg",
     name: "Kanishk Upadhyay",
-    domain: "Socials",
+    domain: "Vice Lead Socials",
     message: "",
     facebook: "",
     github: "",
