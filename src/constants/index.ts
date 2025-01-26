@@ -329,7 +329,7 @@ export const CONTACT_US = {
   heading: "We are always open to new ideas and suggestions.",
   description:
     "If you have any queries or suggestions, feel free to contact us. We will get back to you as soon as possible.",
-  email: "hey@mlsakiit.tech",
+  email: "MLSABITJAIPUR@OUTLOOK.COM",
   phone: {
     primary: "+91 ",
     secondary: "+91 ",
@@ -644,7 +644,7 @@ export const OUR_CURRENT_LEADS = [
     message: "",
     facebook: "",
     instagram: "https://www.instagram.com/shubhgupta219/",
-    github: "https://github.com/CodeMaster17",
+    github: "https://github.com/shubhGupta62",
     linkedIn: "https://www.linkedin.com/in/shubh-gupta-084989274/",
   },
   {
@@ -695,7 +695,7 @@ export const OUR_CURRENT_LEADS = [
     message: "",
     facebook: "",
     github: "",
-    linkedIn: "",
+    linkedIn: "https://www.linkedin.com/in/kanishk-upadhyay-9a665628a/",
     instagram: "https://www.instagram.com/_kanishk_upadhyay/",
   },
   {
