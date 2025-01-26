@@ -15,14 +15,14 @@ const NavbarItem = ({
   type = "link",
   className = "",
   mobileView,
-  external = false
+  external = false,
 }: NavbarItemProps) => {
   if (type === "button") {
     return (
       <Link href={href}>
         <button
-          className={`2xl:text-[1vw] rounded-full bg-gradient-blue px-7 py-1.5 text-md bg-gradient-to-r from-[#0070C5] to-[#3BABCF] hover:from-[#1e00c7] hover:to-[#52a8ff]
-          ${mobileView ? "text-white drop-shadow-md text-xl" : "text-white"}`}
+          className={`bg-gradient-blue text-md rounded-full bg-gradient-to-r from-[#0070C5] to-[#3BABCF] px-7 py-1.5 hover:from-[#1e00c7] hover:to-[#52a8ff] 2xl:text-[1vw]
+          ${mobileView ? "text-xl text-white drop-shadow-md" : "text-white"}`}
         >
           {children}
         </button>
@@ -32,17 +32,16 @@ const NavbarItem = ({
   // #0070C5
   return (
     <Link href={href} target={`${external ? "_blank" : ""}`}>
-      <div className="flex flex-col items-center group">
-        <div className="bg-white w-full h-[2px] -translate-y-[-10px] group-hover:-translate-y-0 opacity-0 group-hover:opacity-70 trasnition-opacity duration-300"></div>
+      <div className="group flex flex-col items-center">
+        <div className="trasnition-opacity h-[2px] w-full -translate-y-[-10px] bg-white opacity-0 duration-300 group-hover:-translate-y-0 group-hover:opacity-70"></div>
         <div
-          className={`2xl:text-[1vw] text-md  cursor-pointer text-sm md:px-2 lg:px-4 font-medium group-hover:bg-[#111]/40 py-1.5 transition duration-300 hover:duration-500 ease-in-out
-        ${className} ${mobileView && "w-full text-center text-white text-xl"} 
+          className={`text-md cursor-pointer  py-1.5 text-sm font-medium transition duration-300 ease-in-out hover:duration-500 group-hover:bg-[#111]/40 md:px-2 lg:px-4 2xl:text-[1vw]
+        ${className} ${mobileView && "w-full text-center text-xl text-white"} 
       `}
         >
           {children}
         </div>
-        <div className="bg-white w-full h-[2px] translate-y-[-10px] group-hover:translate-y-0 opacity-0 group-hover:opacity-70 trasnition-opacity duration-300"></div>
-
+        <div className="trasnition-opacity h-[2px] w-full translate-y-[-10px] bg-white opacity-0 duration-300 group-hover:translate-y-0 group-hover:opacity-70"></div>
       </div>
     </Link>
   );

@@ -5,7 +5,7 @@ import { Button, Card, CardBody } from "@nextui-org/react";
 import { useFormik } from "formik";
 import { signIn } from "next-auth/react";
 import Link from "next/link";
-import { useRouter } from 'next/navigation';
+import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
 import { HiOutlineMail } from "react-icons/hi";
 import { MdPassword } from "react-icons/md";
@@ -13,10 +13,10 @@ import { TypeOf } from "zod";
 import { toFormikValidationSchema } from "zod-formik-adapter";
 import InputBox from "../InputBox";
 
-type loginSchemaType = TypeOf<typeof loginSchema>
+type loginSchemaType = TypeOf<typeof loginSchema>;
 
 const LoginForm = () => {
-  const router = useRouter()
+  const router = useRouter();
 
   const formik = useFormik<loginSchemaType>({
     initialValues: {
@@ -31,27 +31,24 @@ const LoginForm = () => {
           email: values.email,
           password: values.password,
         });
-        console.log(res)
+        console.log(res);
         if (res?.error) {
           toast.error(res?.error || "Unknown error Occurred");
         } else {
           toast.success("Logged in Successfully");
-          router.push("/dashboard")
+          router.push("/dashboard");
         }
       } catch (err) {
-        toast.error("Unknown error Occurred")
+        toast.error("Unknown error Occurred");
       }
     },
   });
 
   return (
-    <Card isBlurred className="px-4 mb-20 m-4" shadow="lg">
+    <Card isBlurred className="m-4 mb-20 px-4" shadow="lg">
       <CardBody>
         <h1 className="p-4 text-center text-2xl font-bold">Login</h1>
-        <form
-          onSubmit={formik.handleSubmit}
-          className="flex flex-col items-center justify-center"
-        >
+        <form onSubmit={formik.handleSubmit} className="flex flex-col items-center justify-center">
           <div className="grid grid-cols-1 gap-4">
             <InputBox
               id="email"
@@ -77,7 +74,7 @@ const LoginForm = () => {
           <Button
             color="primary"
             variant="shadow"
-            className="mt-8 mb-4 w-full"
+            className="mb-4 mt-8 w-full"
             size="lg"
             type="submit"
             isLoading={formik.isSubmitting}

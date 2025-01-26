@@ -1,7 +1,7 @@
-import RegisterForm from "./RegisterForm"
+import RegisterForm from "./RegisterForm";
 
 const Register = () => {
-  return <RegisterForm/>
-}
+  return <RegisterForm />;
+};
 
-export default Register
+export default Register;

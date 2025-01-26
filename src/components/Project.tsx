@@ -5,7 +5,6 @@ import { useAnimation } from "framer-motion";
 import React, { useEffect, useState } from "react";
 import ProjectCard from "./ProjectCard";
 const Project: React.FC = () => {
-
   const textControls = useAnimation();
   const sliderControls = useAnimation();
   const handleSliderAnimationComplete = () => {
@@ -70,9 +69,9 @@ const Project: React.FC = () => {
 
   return (
     <>
-      <div className=" max-w-[1920px] mx-auto pb-[30px]">
+      <div className=" mx-auto max-w-[1920px] pb-[30px]">
         <div className=" mx-auto w-[90vw] ">
-          <div className="w-full pb-[25px] 3xl:gap-[50px] gap-[2.6vw] mt-11  flex flex-wrap items-center justify-around mx-auto">
+          <div className="mx-auto mt-11 flex w-full flex-wrap  items-center justify-around gap-[2.6vw] pb-[25px] 3xl:gap-[50px]">
             {OUR_PROJECTS1.map((project, index) => {
               {
                 if (index + 1 < showMoreClick) {
@@ -117,28 +116,30 @@ const Project: React.FC = () => {
             {/* <div className={`mx-auto mt-[30px] md:mt-[90px] flex w-full cursor-pointer group items-center mr-[5.8vw] 3xl:mr-[0px]`}
                  onClick={changeShowMore}> */}
 
-
             {/* </div> */}
             {/* </motion.div> */}
           </div>
-          <div className="flex items-center justify-center  cursor-pointer group" onClick={changeShowMore}>
-            <div className={`h-[1px] w-[100%] my-auto bg-[#FFFFFF] group-hover:bg-gray-300 ${showMoreClick >= OUR_PROJECTS1.length ? "hidden" : "visible"
-              }`}></div>
+          <div
+            className="group flex cursor-pointer  items-center justify-center"
+            onClick={changeShowMore}
+          >
             <div
-              className={`flex-shrink-0  ml-2 text-[17px] lg:text-[20px] 2xl:text-[25px] 3xl:-[35px] capitalize font-normal leading-none text-white transition duration-300 group-hover:text-[#828282] ${showMoreClick >= OUR_PROJECTS1.length ? "hidden" : "visible"
-                } `}
+              className={`my-auto h-[1px] w-[100%] bg-[#FFFFFF] group-hover:bg-gray-300 ${
+                showMoreClick >= OUR_PROJECTS1.length ? "hidden" : "visible"
+              }`}
+            ></div>
+            <div
+              className={`3xl:-[35px]  ml-2 flex-shrink-0 text-[17px] font-normal capitalize leading-none text-white transition duration-300 group-hover:text-[#828282] lg:text-[20px] 2xl:text-[25px] ${
+                showMoreClick >= OUR_PROJECTS1.length ? "hidden" : "visible"
+              } `}
             >
               View More
             </div>
           </div>
-
         </div>
       </div>
-
-
     </>
+  );
+};
 
-  )
-}
-
-export default Project
+export default Project;

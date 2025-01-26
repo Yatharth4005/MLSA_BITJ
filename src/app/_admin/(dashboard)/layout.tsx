@@ -17,7 +17,7 @@ const AdminDashboardLayout = async ({ children }: ILayoutProps) => {
     throw new Error("Missing email in session");
   }
 
-  const user = await getUser(email)
+  const user = await getUser(email);
 
   if (!user) {
     throw new Error("User not found");

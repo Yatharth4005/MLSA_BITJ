@@ -12,7 +12,6 @@ import { motion, useAnimation } from "framer-motion";
 import React, { useEffect } from "react";
 // import "swiper/swiper-bundle.min.css";
 
-
 const Alumni1: React.FC = () => {
   const textControls = useAnimation();
   const sliderControls = useAnimation();
@@ -36,16 +35,16 @@ const Alumni1: React.FC = () => {
       const windowHeight = window.innerHeight; //determines the height of the  device the user is using
       let num: number;
       if (windowHeight > 720) {
-        num = 0.27
+        num = 0.27;
       } else if (windowHeight > 650) {
-        num = 0.25
+        num = 0.25;
       } else {
-        num = 0.168
+        num = 0.168;
       }
 
       window.addEventListener("scroll", function () {
         var scrollPosition = window.scrollY;
-        if (scrollPosition > windowHeight / .39) {
+        if (scrollPosition > windowHeight / 0.39) {
           const element = document.getElementById("myElement"); // gets the circle on top of the slider
 
           if (element) {
@@ -80,7 +79,6 @@ const Alumni1: React.FC = () => {
     };
   });
 
-
   return (
     <>
       <div className="mx-auto flex pl-4 md:pl-[50px] lg:pl-[80px] xl:pl-[90px] 2xl:pl-[130px]">
@@ -93,12 +91,12 @@ const Alumni1: React.FC = () => {
         >
           <div className="flex flex-col items-center">
             <div
-              className="flex h-[30px] w-[30px] md:h-[41px] md:w-[41px] items-center justify-center rounded-full bg-[#A93BCF] bg-gradient-to-b from-[#473BCF]  to-[#fff]/30 shadow-dotShadowBlue duration-700 transition 
+              className="flex h-[30px] w-[30px] items-center justify-center rounded-full bg-[#A93BCF] bg-gradient-to-b from-[#473BCF] to-[#fff]/30 shadow-dotShadowBlue  transition duration-700 md:h-[41px] md:w-[41px] 
               "
             >
               <div className="h-[12px] w-[12px] self-center rounded-full bg-white"></div>
             </div>
-            <div className="h-[30vh] md:h-[60vh] w-[5px]  bg-gradient-to-b from-[#533BD0] to-transparent duration-700 transition lg:h-[80vh]"></div>
+            <div className="h-[30vh] w-[5px] bg-gradient-to-b  from-[#533BD0] to-transparent transition duration-700 md:h-[60vh] lg:h-[80vh]"></div>
           </div>
         </motion.div>
 
@@ -108,12 +106,13 @@ const Alumni1: React.FC = () => {
             animate={controls1} //text conntrol animation triggered.
             transition={{ duration: 1 }}
           >
-            <h1 className="sm:mb-[7px] ml-[11px] sm:ml-[15px] lg:ml-[30px] md:text-4xl text-xl  2xl:text-[2.1vw]  2xl:ml-[53px]  font-semibold md:mb-[20px] items-start text-[#FFFFFF] ">
-              Message From <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#A03BCF] to-[#6F5BFF]">Our Alumni</span>
+            <h1 className="ml-[11px] items-start text-xl font-semibold text-[#FFFFFF] sm:mb-[7px]  sm:ml-[15px]  md:mb-[20px]  md:text-4xl lg:ml-[30px] 2xl:ml-[53px] 2xl:text-[2.1vw] ">
+              Message From{" "}
+              <span className="bg-gradient-to-r from-[#A03BCF] to-[#6F5BFF] bg-clip-text text-transparent">
+                Our Alumni
+              </span>
             </h1>
           </motion.div>
-
-
           {/* <div className=" md:pl-8">
             <motion.div
               initial={{ opacity: 0 }} //initial position of text with opacity 0
@@ -216,9 +215,7 @@ const Alumni1: React.FC = () => {
                 }}
               >
                 {/* {OUR_ALUMNI.map((Lead, index) => { */}
-
           return (
-
           {/* <SwiperSlide key={index} className=" sm:w-[260px] md:w-[460px]">
                       <motion.div
                         // key={index}
@@ -239,10 +236,8 @@ const Alumni1: React.FC = () => {
           {/* </Swiper> */}
           {/* </motion.div> */}
           {/* </div> */}
-
         </div>
       </div>
-
     </>
   );
 };

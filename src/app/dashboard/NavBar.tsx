@@ -13,9 +13,7 @@ interface IProps {
 const Navbar = ({ user }: IProps) => {
   const router = useRouter();
   return (
-    <nav
-      className="fixed left-0 right-0 top-0 z-40  w-screen max-w-full py-4 pl-2 pr-4 sm:pl-4 sm:pr-6 lg:pl-6 lg:pr-10 lg:max-w-[1920px] backdrop-blur-md"
-    >
+    <nav className="fixed left-0 right-0 top-0 z-40  w-screen max-w-full py-4 pl-2 pr-4 backdrop-blur-md sm:pl-4 sm:pr-6 lg:max-w-[1920px] lg:pl-6 lg:pr-10">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-4">
           <Link href="/">
@@ -50,16 +48,16 @@ const Navbar = ({ user }: IProps) => {
               <p className="font-bold">Signed in as</p>
               <p className="font-bold">{user.personalEmail}</p>
             </DropdownItem>
-            <DropdownItem key="dashboard" onPress={() => router.push("/dashboard")} >
+            <DropdownItem key="dashboard" onPress={() => router.push("/dashboard")}>
               Dashboard
             </DropdownItem>
-            <DropdownItem key="my-details" onPress={() => router.push("/dashboard/my-details")} >
+            <DropdownItem key="my-details" onPress={() => router.push("/dashboard/my-details")}>
               My Details
             </DropdownItem>
-            <DropdownItem key="qrcode" onPress={() => router.push("/dashboard/qrcode")} >
+            <DropdownItem key="qrcode" onPress={() => router.push("/dashboard/qrcode")}>
               QR Code
             </DropdownItem>
-            <DropdownItem key="contact-us" onPress={() => router.push("/contact")} >
+            <DropdownItem key="contact-us" onPress={() => router.push("/contact")}>
               Contact Us
             </DropdownItem>
             <DropdownItem key="logout" color="danger" onPress={() => signOut()}>
@@ -68,7 +66,7 @@ const Navbar = ({ user }: IProps) => {
           </DropdownMenu>
         </Dropdown>
       </div>
-    </nav >
+    </nav>
   );
 };
 

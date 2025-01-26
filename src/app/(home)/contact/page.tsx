@@ -8,9 +8,12 @@ export const metadata = {
 
 const Contact = () => {
   return (
-    <div className="m-auto mt-32 max-w-3xl px-4 py-3 shadow-contactFormBoxShadow ">
+    <div className="shadow-contactFormBoxShadow m-auto mt-32 max-w-3xl px-4 py-3 ">
       <h1 className="text-center text-4xl font-semibold">
-        Contact <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0070C5] to-[#3BABCF]">Us</span>
+        Contact{" "}
+        <span className="bg-gradient-to-r from-[#0070C5] to-[#3BABCF] bg-clip-text text-transparent">
+          Us
+        </span>
       </h1>
       <ContactForm />
     </div>

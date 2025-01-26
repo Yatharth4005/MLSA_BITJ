@@ -43,7 +43,7 @@ const Hero = () => {
             registrationClosed={false}
             display={true}
             registrationName="Register Now"
-          // Add know rules link here
+            // Add know rules link here
           />
         </div>
         {/* <div className="absolute left-0 right-0 top-20 z-30 flex justify-center smm:top-14 md:top-20 ">

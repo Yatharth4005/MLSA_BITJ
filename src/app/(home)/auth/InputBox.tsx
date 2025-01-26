@@ -12,37 +12,27 @@ interface IProps {
   error: string | undefined | false;
 }
 
-const InputBox = ({
-  id,
-  icon,
-  label,
-  onChange,
-  value,
-  placeholder,
-  type,
-  error
-}: IProps) => {
-  return <Input
-    id={id}
-    name={id}
-    size="lg"
-    type={type}
-    label={label}
-    placeholder={placeholder}
-    labelPlacement="outside"
-    startContent={icon}
-    validationState={error ? "invalid" : "valid"}
-    errorMessage={error}
-    className="max-w-xs py-2"
-    classNames={{
-      input: [
-        "placeholder:text-sm"
-      ]
-    }}
-    value={value}
-    onChange={onChange}
-  />
-}
-
+const InputBox = ({ id, icon, label, onChange, value, placeholder, type, error }: IProps) => {
+  return (
+    <Input
+      id={id}
+      name={id}
+      size="lg"
+      type={type}
+      label={label}
+      placeholder={placeholder}
+      labelPlacement="outside"
+      startContent={icon}
+      validationState={error ? "invalid" : "valid"}
+      errorMessage={error}
+      className="max-w-xs py-2"
+      classNames={{
+        input: ["placeholder:text-sm"],
+      }}
+      value={value}
+      onChange={onChange}
+    />
+  );
+};
 
 export default InputBox;

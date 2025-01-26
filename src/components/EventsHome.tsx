@@ -51,12 +51,12 @@ const EventHome = ({
               {registrationClosed ? "Registeration Closed" : `${registrationName}`}
             </Link>
           </div>
-          <div className={`cursor-pointer bg-gradient-to-r from-[#0070C5] to-[#3BABCF] bg-clip-text text-lg md:text-xl 2xl:text-[1.4vw] 3xl:text-[25px font-semibold text-transparent hover:from-[#3BABCF] hover:to-[#0070C5]
-        block
-      `}>
+          <div
+            className={`3xl:text-[25px block cursor-pointer bg-gradient-to-r from-[#0070C5] to-[#3BABCF] bg-clip-text text-lg font-semibold text-transparent hover:from-[#3BABCF] hover:to-[#0070C5] md:text-xl
+        2xl:text-[1.4vw]
+      `}
+          >
             {/*           <Link href={"https://forms.office.com/r/DvkW3C0Ff0"}>{registrationClosed ? "Register Now" : "Registeration Closed"}</Link> */}
-
-
           </div>
         </div>
       </div>

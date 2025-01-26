@@ -1,5 +1,5 @@
 import { getServerSession } from "@/server/auth";
-import SignOut from "./SignOut"
+import SignOut from "./SignOut";
 import Link from "next/link";
 
 const Dashboard = async () => {
@@ -9,7 +9,7 @@ const Dashboard = async () => {
     <div>
       <h1>Dashboard</h1>
     </div>
-  )
-}
+  );
+};
 
 export default Dashboard;

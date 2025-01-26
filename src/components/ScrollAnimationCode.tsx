@@ -41,7 +41,7 @@ const ScrollAnimationCode: React.FC = () => {
           }
         }
       });
-      if (scrollPosition > windowHeight / .2) {
+      if (scrollPosition > windowHeight / 0.2) {
         controls.start({ opacity: 1, y: 70, x: 0 }); //Final position for slider
       }
     };
@@ -54,7 +54,7 @@ const ScrollAnimationCode: React.FC = () => {
   });
 
   return (
-    <div className="w-screen flex pl-4 md:pl-[50px] lg:pl-[80px] xl:pl-[90px] 2xl:pl-[130px] pb-[100px] ">
+    <div className="flex w-screen pb-[100px] pl-4 md:pl-[50px] lg:pl-[80px] xl:pl-[90px] 2xl:pl-[130px] ">
       <motion.div
         className="justify-centre flex"
         initial={{ opacity: 0, y: 200 }} //before scrolling position of slider
@@ -63,17 +63,10 @@ const ScrollAnimationCode: React.FC = () => {
         onAnimationComplete={handleSliderAnimationComplete}
       >
         <Slider />
-
       </motion.div>
       {/* Completed slider animation */}
-      <div
-        className="flex overflow-hidden"
-
-      >
-        {/* <Sponsors /> */}
-      </div>
+      <div className="flex overflow-hidden">{/* <Sponsors /> */}</div>
       {/* Text animation(can be changed)*/}
-
     </div>
   );
 };

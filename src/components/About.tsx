@@ -8,8 +8,6 @@ import { TbTargetArrow } from "react-icons/tb";
 import AboutCard from "./AboutCard";
 
 const About: React.FC = () => {
-
-
   const textControls = useAnimation();
   const sliderControls = useAnimation();
   const handleSliderAnimationComplete = () => {
@@ -68,8 +66,8 @@ const About: React.FC = () => {
 
   return (
     <>
-      <div className="cursor-default overflow-hidden mx-auto flex w-screen max-w-[1920px] overflow-y-hidden bg-transparent pt-12 pl-4 md:pl-[50px] lg:pl-[80px] xl:pl-[90px] 2xl:pl-[130px]">
-        <div className="flex w-full h-full pb-[80px] md:pb-[110px] xl:pb-[150px]">
+      <div className="mx-auto flex w-screen max-w-[1920px] cursor-default overflow-hidden overflow-y-hidden bg-transparent pl-4 pt-12 md:pl-[50px] lg:pl-[80px] xl:pl-[90px] 2xl:pl-[130px]">
+        <div className="flex h-full w-full pb-[80px] md:pb-[110px] xl:pb-[150px]">
           <motion.div
             className="flex justify-center"
             initial={{ opacity: 0, y: 700 }} //before scrolling position of slider
@@ -77,33 +75,35 @@ const About: React.FC = () => {
             transition={{ duration: 2 }} //slider duration for popping up. if you are changinng duration then make sure to change delay of glow adder so thatt  the gow starts after animation is complete
             onAnimationComplete={handleSliderAnimationComplete}
           >
-            <div className="flex flex-col items-center h-[125%]">
+            <div className="flex h-[125%] flex-col items-center">
               <div
-                className="flex h-[31px] w-[31px] md:h-[41px] md:w-[41px] items-center justify-center rounded-full bg-blue-600 bg-gradient-to-b from-[#0957cc] to-[#fff]/30 shadow-dotShadowBlue duration-700 transition 
+                className="flex h-[31px] w-[31px] items-center justify-center rounded-full bg-blue-600 bg-gradient-to-b from-[#0957cc] to-[#fff]/30 shadow-dotShadowBlue transition duration-700 md:h-[41px] md:w-[41px] 
               "
               >
                 <div className="h-[12px] w-[12px] self-center rounded-full bg-white"></div>
               </div>
-              <div className="h-full w-[3px] md:w-[5px] bg-gradient-to-b from-[#4b8ff4] to-transparent duration-700 transition lg:h-full"></div>
+              <div className="h-full w-[3px] bg-gradient-to-b from-[#4b8ff4] to-transparent transition duration-700 md:w-[5px] lg:h-full"></div>
             </div>
           </motion.div>
 
           <div className="w-full">
-            <motion.div className="2xl:ml-12 xl:ml-8 ml-4 text-white sm:ml-12"
+            <motion.div
+              className="ml-4 text-white sm:ml-12 xl:ml-8 2xl:ml-12"
               initial={{ opacity: 0, x: 70, y: 0 }}
               animate={controls1} //refer to line 20
               transition={{ duration: 1 }} //slider duration for popping up. if you are changinng duration then make sure to change delay of glow adder so thatt  the gow starts after animation is complete
-              onAnimationComplete={handleSliderAnimationComplete}>
+              onAnimationComplete={handleSliderAnimationComplete}
+            >
               <h1 className="js-build-in-item text-xl font-semibold md:text-4xl 2xl:text-[2.1vw]">
                 About<span className="ml-1 text-[#3B61CF]">Us</span>
               </h1>
-              <p className="text-md md:mt-6 text-[#7d8590] md:text-xl md:leading-6">
+              <p className="text-md text-[#7d8590] md:mt-6 md:text-xl md:leading-6">
                 A community trying to bridge
                 <br />
                 the gap between academia & industry
               </p>
             </motion.div>
-            <div className="flex flex-col md:flex-row md:flex-wrap gap-[40px] xl:gap-[30px] 2xl:gap-[50px] md:ml-[60px] mt-[50px] md:mt-[100px] sm:ml-12  mr-4 ">
+            <div className="mr-4 mt-[50px] flex flex-col gap-[40px] sm:ml-12 md:ml-[60px] md:mt-[100px] md:flex-row md:flex-wrap xl:gap-[30px]  2xl:gap-[50px] ">
               <motion.div
                 className="flex justify-center"
                 initial={{ opacity: 0, y: 200 }} //before scrolling position of slider

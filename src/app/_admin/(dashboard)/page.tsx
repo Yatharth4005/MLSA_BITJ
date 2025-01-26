@@ -3,7 +3,6 @@
 // import { redirect } from "next/navigation";
 
 const Admin = async () => {
-
   return (
     <div>
       {/* <pre>

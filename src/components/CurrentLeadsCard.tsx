@@ -23,7 +23,18 @@ const imgStyle: any = {
   objectPosition: "center",
   objectFit: "cover",
 };
-const CurrentLeadsCard = ({ image, name, domain, index, isActive, onClick, instagram, linkedIn, facebook, github}: Props) => {
+const CurrentLeadsCard = ({
+  image,
+  name,
+  domain,
+  index,
+  isActive,
+  onClick,
+  instagram,
+  linkedIn,
+  facebook,
+  github,
+}: Props) => {
   const [showDetail, setShowDetail] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -31,8 +42,11 @@ const CurrentLeadsCard = ({ image, name, domain, index, isActive, onClick, insta
     onClick();
   };
   return (
-    <div className="h-[26rem]  w-[14rem]  rounded-imageradius" >
-      <div className="relative h-[20rem] hover:cursor-pointer w-full rounded-imageradius mt-[4rem] z-10 hover:shadow-leadsCardShadow  transition-all" onClick={handleImageClick}>
+    <div className="h-[26rem]  w-[14rem]  rounded-imageradius">
+      <div
+        className="hover:shadow-leadsCardShadow relative z-10 mt-[4rem] h-[20rem] w-full rounded-imageradius transition-all  hover:cursor-pointer"
+        onClick={handleImageClick}
+      >
         <Image
           src={image}
           style={imgStyle}
@@ -41,34 +55,37 @@ const CurrentLeadsCard = ({ image, name, domain, index, isActive, onClick, insta
           height={700}
           alt="name"
         />
-        <div className="cursor-pointer absolute bottom-0 left-0 h-full w-full rounded-imageradius bg-gradient-to-t from-black via-transparent to-transparent">
+        <div className="absolute bottom-0 left-0 h-full w-full cursor-pointer rounded-imageradius bg-gradient-to-t from-black via-transparent to-transparent">
           {" "}
         </div>
         <div className="absolute bottom-4 w-full">
           <h1 className=" bold  text-center text-[1rem] text-[#FFFFFF]">{name}</h1>
-          {isActive && (
-            <h1 className="bold  text-center text-[0.8rem] text-[#9CE1FF]">{domain}</h1>
-          )}
+          {isActive && <h1 className="bold  text-center text-[0.8rem] text-[#9CE1FF]">{domain}</h1>}
         </div>
       </div>
       {/* -translate-y-32 */}
-      <div className={isActive ? "mt-[1.4rem] flex items-center justify-evenly transition transform ease-in-out delay-400 z-10" : " flex  items-center justify-evenly mt-[1.4rem] transition transform ease-in-out delay-400  -translate-y-32 z-0"}>
+      <div
+        className={
+          isActive
+            ? "delay-400 z-10 mt-[1.4rem] flex transform items-center justify-evenly transition ease-in-out"
+            : " delay-400  z-0 mt-[1.4rem] flex -translate-y-32 transform items-center justify-evenly  transition ease-in-out"
+        }
+      >
         <Link href={instagram} target="_blank">
-          <div className="bg-[#111111] bg-opacity-50 flex h-[3rem] w-[3rem] items-center justify-center rounded-[6rem] border border-[#3D3D3D] backdrop-blur-[17.5px] hover:bg-[#3D3D3D]">
+          <div className="flex h-[3rem] w-[3rem] items-center justify-center rounded-[6rem] border border-[#3D3D3D] bg-[#111111] bg-opacity-50 backdrop-blur-[17.5px] hover:bg-[#3D3D3D]">
             <Image src={InstaIcon} alt="icon" />
           </div>
         </Link>
         <Link href={linkedIn} target="_blank">
-          <div className="bg-[#111111] bg-opacity-50 flex h-[3rem] w-[3rem] items-center justify-center rounded-[6rem] border border-[#3D3D3D] backdrop-blur-[17.5px] hover:bg-[#3D3D3D]">
+          <div className="flex h-[3rem] w-[3rem] items-center justify-center rounded-[6rem] border border-[#3D3D3D] bg-[#111111] bg-opacity-50 backdrop-blur-[17.5px] hover:bg-[#3D3D3D]">
             <Image src={LinkdIcon} alt="icon" />
           </div>
         </Link>
         <Link href={github} target="_blank">
-          <div className="bg-[#111111] bg-opacity-50 flex h-[3rem] w-[3rem] items-center justify-center rounded-[6rem] border border-[#3D3D3D] backdrop-blur-[17.5px] hover:bg-[#3D3D3D]">
+          <div className="flex h-[3rem] w-[3rem] items-center justify-center rounded-[6rem] border border-[#3D3D3D] bg-[#111111] bg-opacity-50 backdrop-blur-[17.5px] hover:bg-[#3D3D3D]">
             <Image src={GithubIcon} alt="icon" />
           </div>
         </Link>
-
       </div>
     </div>
   );

@@ -47,10 +47,10 @@ const ContactForm = () => {
 
   return (
     <div className="mt-16 flex flex-col items-center justify-center gap-12 ">
-
-
       <div className="grid w-full max-w-sm items-center gap-1.5">
-        <Label htmlFor="name">Name <span className="text-red-600">*</span></Label>
+        <Label htmlFor="name">
+          Name <span className="text-red-600">*</span>
+        </Label>
         <Input
           type="text"
           id="name"
@@ -61,7 +61,9 @@ const ContactForm = () => {
         />
       </div>
       <div className="grid w-full max-w-sm items-center gap-1.5">
-        <Label htmlFor="email">Email <span className="text-red-600">*</span></Label>
+        <Label htmlFor="email">
+          Email <span className="text-red-600">*</span>
+        </Label>
         <Input
           type="email"
           id="email"
@@ -72,7 +74,9 @@ const ContactForm = () => {
         />
       </div>
       <div className="grid w-full max-w-sm items-center gap-1.5">
-        <Label htmlFor="message">Your message <span className="text-red-600">*</span></Label>
+        <Label htmlFor="message">
+          Your message <span className="text-red-600">*</span>
+        </Label>
         <Textarea
           placeholder="Type your message here."
           id="message"
@@ -87,9 +91,9 @@ const ContactForm = () => {
         </div>
       </div>
       <Button
-        className="2xl:text-md rounded-full  bg-gradient-blue px-7 py-2 text-sm bg-gradient-to-r from-[#0070C5] to-[#3BABCF] "
+        className="2xl:text-md bg-gradient-blue  rounded-full bg-gradient-to-r from-[#0070C5] to-[#3BABCF] px-7 py-2 text-sm "
         disabled={isLoading}
-        onClick={isLoading ? () => { } : sendMail}
+        onClick={isLoading ? () => {} : sendMail}
       >
         {isLoading ? (
           <>

@@ -42,7 +42,7 @@ const Gallery = () => {
 
   return (
     <>
-      <div className="absolute inset-0 max-w-[1920px] mx-auto">
+      <div className="absolute inset-0 mx-auto max-w-[1920px]">
         {/* <Image
           src="/heroLeft.png"
           alt="hero left gradient"
@@ -60,14 +60,16 @@ const Gallery = () => {
           /> */}
       </div>
       {/* </div> */}
-      <div className="flex 2xl:h-screen mt-[100px] md:mt-[120px] 2xl:mt-[30px] 2xl:items-center md:pl-2 lg:pl-14 3xl:pl-16 max-w-[1920px] mx-auto">
-        <div className="flex md:flex-row flex-col justify-between items-center pb-[45px] md:pb-[100px] 2xl:pb-[0px] w-full ">
+      <div className="mx-auto mt-[100px] flex max-w-[1920px] md:mt-[120px] md:pl-2 lg:pl-14 2xl:mt-[30px] 2xl:h-screen 2xl:items-center 3xl:pl-16">
+        <div className="flex w-full flex-col items-center justify-between pb-[45px] md:flex-row md:pb-[100px] 2xl:pb-[0px] ">
           <div className="flex flex-col items-center md:items-start ">
-            <h1 className="bg-gradient-to-b from-[#5051F9] to-[#AE86E0] bg-clip-text  font-bold text-transparent text-[30px] sm:text-4xl lg:text-5xl  3xl:text-7xl h-[2.8rem]  md:h-[3rem] lg:h-[3.6rem] 3xl:h-[5.2rem]">
+            <h1 className="h-[2.8rem] bg-gradient-to-b from-[#5051F9] to-[#AE86E0]  bg-clip-text text-[30px] font-bold text-transparent sm:text-4xl  md:h-[3rem] lg:h-[3.6rem]  lg:text-5xl 3xl:h-[5.2rem] 3xl:text-7xl">
               Gallery
             </h1>
-            <div className="text-md mt-1 lg:mt-2 md:text-lg lg:text-xl">
-              <p className="text-xl md:tracking-wider md:text-[25px] 2xl:text-4xl 3xl:text-[40px]">Beautiful memories Coming soon</p>
+            <div className="text-md mt-1 md:text-lg lg:mt-2 lg:text-xl">
+              <p className="text-xl md:text-[25px] md:tracking-wider 2xl:text-4xl 3xl:text-[40px]">
+                Beautiful memories Coming soon
+              </p>
               {/* <div className=" mt-[18px] md:mt-[30px] lg:mt-[58px]  flex md:gap-14 3xl:gap-16 justify-between md:justify-start ">
                 {/* <div className="flex flex-col">
                   <span className="bg-gradient-to-b from-[#5051F9] to-[#AE86E0] bg-clip-text text-transparent text-2xl font-bold md:text-3xl 3xl:text-5xl">{rojectsCounter}+</span>
@@ -80,11 +82,17 @@ const Gallery = () => {
               {/* </div> */}
             </div>
           </div>
-          <div className="relative mx-auto md:mx-[0px] mt-[23px] md:ml-[0px] md:mt-0 md:mr-[7vw] h-[345px] sm:h-[350px] lg:h-[430px] 2xl:h-[500px] 3xl:h-[600px] -translate-x-3 sm:-translate-x-6 md:-translate-x-0 w-[80vw] sm:w-[75vw] md:w-[50%] object-cover lg:max-h-[600px] 2xl:max-w-[650px] 3xl:w-[45%] 3xl:max-w-[800px]">
-            <div className="w-full h-full bg-[#111]/20 absolute inset-0 z-40 rounded-2xl"></div>
+          <div className="relative mx-auto mt-[23px] h-[345px] w-[80vw] -translate-x-3 object-cover sm:h-[350px] sm:w-[75vw] sm:-translate-x-6 md:mx-[0px] md:ml-[0px] md:mr-[7vw] md:mt-0 md:w-[50%] md:-translate-x-0 lg:h-[430px] lg:max-h-[600px] 2xl:h-[500px] 2xl:max-w-[650px] 3xl:h-[600px] 3xl:w-[45%] 3xl:max-w-[800px]">
+            <div className="absolute inset-0 z-40 h-full w-full rounded-2xl bg-[#111]/20"></div>
             <div className="absolute inset-0 z-40 flex h-full w-full items-center justify-between px-12 text-3xl">
-              <BiSolidChevronLeftCircle className={` cursor-pointer ${pictureState === 0 ? "opacity-50" : "opacity-100"}`} onClick={LeftChevronClick} />
-              <BiSolidChevronRightCircle className={` cursor-pointer ${pictureState === 2 ? "opacity-50" : "opacity-100"}`} onClick={RightChevronClick} />
+              <BiSolidChevronLeftCircle
+                className={` cursor-pointer ${pictureState === 0 ? "opacity-50" : "opacity-100"}`}
+                onClick={LeftChevronClick}
+              />
+              <BiSolidChevronRightCircle
+                className={` cursor-pointer ${pictureState === 2 ? "opacity-50" : "opacity-100"}`}
+                onClick={RightChevronClick}
+              />
             </div>
             {/* <Image
               src="/gallery/hero/1.jpg"
@@ -116,7 +124,7 @@ const Gallery = () => {
                 height={1080}
                 className="object fit rounded-2xl h-full"
               /> */}
-            <div className="absolute inset-0 bg[#111]/30 w-full h-full"></div>
+            <div className="bg[#111]/30 absolute inset-0 h-full w-full"></div>
           </div>
         </div>
       </div>

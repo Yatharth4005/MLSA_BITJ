@@ -13,7 +13,6 @@ import { motion, useAnimation } from "framer-motion";
 
 // import "swiper/swiper-bundle.min.css";
 
-
 const OurAlumuni = () => {
   const textControls = useAnimation();
   const sliderControls = useAnimation();
@@ -37,7 +36,7 @@ const OurAlumuni = () => {
 
       window.addEventListener("scroll", function () {
         var scrollPosition = window.scrollY;
-        if (scrollPosition > windowHeight / .9) {
+        if (scrollPosition > windowHeight / 0.9) {
           const element = document.getElementById("myElement"); // gets the circle on top of the slider
 
           if (element) {
@@ -54,7 +53,7 @@ const OurAlumuni = () => {
         }
       });
 
-      if (scrollPosition > windowHeight / .7) {
+      if (scrollPosition > windowHeight / 0.7) {
         controls.start({ opacity: 1, y: 0, x: 0 }); //Final position for slider
       } else {
         controls.start({ opacity: 0, y: 1800, x: 0 }); //Initial starting positionn for slider
@@ -80,16 +79,17 @@ const OurAlumuni = () => {
 // fetachAlumni();
 // });
 // return (
-<div className="  pl-20 my-[10px]">
-
-
+<div className="  my-[10px] pl-20">
   <motion.div
     initial={{ opacity: 0, x: 1000, y: 0 }} //initial position of text with opacity 0
     // animate={textControls} //text conntrol animation triggered.
     transition={{ duration: 1 }}
   >
-    <h1 className="sm:mb-[7px] ml-[11px] sm:ml-[15px] lg:ml-[30px] 2xl:ml-[53px] text-[12px] sm:text-[18px] font-semibold md:mb-[20px] md:text-3xl items-start text-[#FFFFFF] 2xl:text-[2.1vw] ">
-      Message From <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#A03BCF] to-[#6F5BFF]">Our Alumni</span>
+    <h1 className="ml-[11px] items-start text-[12px] font-semibold text-[#FFFFFF] sm:mb-[7px] sm:ml-[15px] sm:text-[18px] md:mb-[20px] md:text-3xl lg:ml-[30px] 2xl:ml-[53px] 2xl:text-[2.1vw] ">
+      Message From{" "}
+      <span className="bg-gradient-to-r from-[#A03BCF] to-[#6F5BFF] bg-clip-text text-transparent">
+        Our Alumni
+      </span>
     </h1>
   </motion.div>
 
@@ -155,9 +155,7 @@ const OurAlumuni = () => {
       }}
     >
       {/* {OUR_ALUMNI.map((Lead, index) => { */}
-
       return (
-
       {/* <SwiperSlide key={index} className="  sm:w-[460px]">
                 <motion.div
                   // key={index}
@@ -177,9 +175,7 @@ const OurAlumuni = () => {
       {/* })} */}
     </Swiper>
   </div>
-
-
-</div>
+</div>;
 // );
 // };
 

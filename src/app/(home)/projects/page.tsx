@@ -38,7 +38,6 @@ const Projects = () => {
   //         setIsFirstScroll(true)
   //         // const element = document.getElementById("myElement"); // gets the circle on top of the slider
 
-
   //       }
   //     });
 
@@ -76,7 +75,7 @@ const Projects = () => {
           Projects
         </h1>
         <div className="text-md mt-2 md:text-lg lg:text-xl">
-          <p className={`${isFirstScroll && 'animate-[fadeinout_1s'} text-center`}>
+          <p className={`${isFirstScroll && "animate-[fadeinout_1s"} text-center`}>
             <span>We are proud of our </span>
             <span className="bg-gradient-to-b from-[#5051F9] to-[#AE86E0] bg-clip-text font-semibold text-transparent">
               community members
@@ -93,10 +92,11 @@ const Projects = () => {
             </div>
           </div>
         </div>
-        <div className="mt-8 w-3/4 h-[1px] bg-[#d1d5db] md:h-[2px] rounded-full lg:hidden"></div>
-        <div className="mt-6 w-1/4 h-[1px] bg-[#d1d5db] md:h-[2px] rounded-full hidden lg:block"></div>
+        <div className="mt-8 h-[1px] w-3/4 rounded-full bg-[#d1d5db] md:h-[2px] lg:hidden"></div>
+        <div className="mt-6 hidden h-[1px] w-1/4 rounded-full bg-[#d1d5db] md:h-[2px] lg:block"></div>
       </div>
-      <br /><br />
+      <br />
+      <br />
       <LatestProjects />
       <Project />
     </>

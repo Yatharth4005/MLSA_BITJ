@@ -24,34 +24,30 @@ const getUserData = async (personalEmail: string) => {
         isMember: true,
       },
     });
-    return user
+    return user;
   } catch (error) {
-    return null
+    return null;
   }
-}
+};
 
 export default async function HomeLayout({ children }: ILayoutProps) {
   const session = await getServerSession();
 
-  if (!session?.user?.personalEmail) redirect("/auth/login")
+  if (!session?.user?.personalEmail) redirect("/auth/login");
 
   const user = await getUserData(session?.user?.personalEmail);
 
-  if (!user) return (
-    <div className="flex justify-center items-center h-screen">
-      <div className="text-2xl font-bold text-gray-700">
-        ⚠️ Something went wrong ⚠️
+  if (!user)
+    return (
+      <div className="flex h-screen items-center justify-center">
+        <div className="text-2xl font-bold text-gray-700">⚠️ Something went wrong ⚠️</div>
       </div>
-    </div>
-  )
-
+    );
 
   return (
     <>
       <Navbar user={user} />
-      <div
-        className="mt-24"
-      >{children}</div>
+      <div className="mt-24">{children}</div>
     </>
   );
 }

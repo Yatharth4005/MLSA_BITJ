@@ -37,11 +37,13 @@ const HeroTextAnimation = ({ texts }: HeroTextAnimationProps) => {
   }, [texts]);
 
   return (
-    <div className={`text-start ml-2 flex overflow-hidden text-transparent bg-clip-text bg-gradient-to-r from-[#45F4FF] to-[#572EFA]`}>
+    <div
+      className={`ml-2 flex overflow-hidden bg-gradient-to-r from-[#45F4FF] to-[#572EFA] bg-clip-text text-start text-transparent`}
+    >
       {texts.map((text, index) => (
         <span
           key={index}
-          className={`w-full flex-shrink-0 duration-1000 ease-in-out transition-transform`}
+          className={`w-full flex-shrink-0 transition-transform duration-1000 ease-in-out`}
         >
           {textAnimation}
         </span>

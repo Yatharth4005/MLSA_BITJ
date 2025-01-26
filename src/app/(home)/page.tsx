@@ -1,4 +1,3 @@
-
 import About from "@/components/About";
 
 import { Analytics } from "@vercel/analytics/react";
@@ -10,8 +9,6 @@ import Leads from "@/components/LeadsAnimated";
 import CurrentLeads from "@/components/CurrentLeadsAnimated";
 import Domain from "@/components/Domain";
 import Hero from "@/components/Hero";
-
-
 
 import ScrollAnimationCode from "@/components/ScrollAnimationCode";
 
@@ -29,6 +26,5 @@ export default function Home() {
       {/* <Alumni1 /> */}
       <ScrollAnimationCode />
     </div>
-  )
+  );
 }
-

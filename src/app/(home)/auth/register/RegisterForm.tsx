@@ -17,10 +17,10 @@ import { TypeOf } from "zod";
 import { toFormikValidationSchema } from "zod-formik-adapter";
 import InputBox from "../InputBox";
 
-type registerSchemaType = TypeOf<typeof registerSchema>
+type registerSchemaType = TypeOf<typeof registerSchema>;
 
 const RegisterForm = () => {
-  const router = useRouter()
+  const router = useRouter();
 
   const formik = useFormik<registerSchemaType>({
     initialValues: {
@@ -37,7 +37,7 @@ const RegisterForm = () => {
     },
     validationSchema: toFormikValidationSchema(registerSchema),
     onSubmit: async (values) => {
-      console.log(values)
+      console.log(values);
       try {
         const res = await fetch("/api/auth/register", {
           method: "POST",
@@ -62,23 +62,15 @@ const RegisterForm = () => {
       } catch (err) {
         toast.error("Unknown error Occurred");
       }
-    }
-
-  })
+    },
+  });
 
   return (
-    <Card
-      isBlurred
-      className="px-4 mb-20 m-4"
-      shadow="lg"
-    >
+    <Card isBlurred className="m-4 mb-20 px-4" shadow="lg">
       <CardBody>
         <h1 className="p-4 text-center text-2xl font-bold">Register</h1>
-        <form
-          onSubmit={formik.handleSubmit}
-          className="flex flex-col items-center justify-center"
-        >
-          <div className="grid grid-cols-1 gap-4 sm:gap-8 sm:grid-cols-2">
+        <form onSubmit={formik.handleSubmit} className="flex flex-col items-center justify-center">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-8">
             <InputBox
               id="name"
               type="text"
@@ -183,7 +175,7 @@ const RegisterForm = () => {
           <Button
             color="primary"
             variant="shadow"
-            className="mt-8 mb-4 w-full"
+            className="mb-4 mt-8 w-full"
             size="lg"
             type="submit"
             isLoading={formik.isSubmitting}

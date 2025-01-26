@@ -4,28 +4,27 @@ import { FaGithub, FaInstagram, FaLinkedinIn, FaPhoneAlt, FaRegCopyright } from 
 import { HiMail } from "react-icons/hi";
 
 type socialsProps = {
-  logo: React.ReactNode
-  src: string,
-}
+  logo: React.ReactNode;
+  src: string;
+};
 
 const Socials = ({ logo, src }: socialsProps) => {
   return (
     <Link href={src} target="_blank">
-      <div className="w-[50px] h-[50px] bg-transparent border-transparent border-2 rounded-full flex justify-center items-center hover:border-[#d7d3d3] transition duration-1000">
+      <div className="flex h-[50px] w-[50px] items-center justify-center rounded-full border-2 border-transparent bg-transparent transition duration-1000 hover:border-[#d7d3d3]">
         {logo}
       </div>
     </Link>
-
-  )
-}
+  );
+};
 
 const Footer = () => {
   return (
     <>
-      <div id="footer" className="bg-[#111111] bg-opacity-70 custom-font tracking-[3px] pb-8">
-        <div className="max-w-[1500px] mx-auto text-[#e7e4e4]">
-          <div className="flex flex-col md:flex-row gap-8 md:gap-0 px-2 sm:px-4 justify-between  xl:px-16 py-8 md:py-6 xl:py-8">
-            <div className="md:w-[50%] xl:w-[60%] flex flex-col items-center md:items-start">
+      <div id="footer" className="custom-font bg-[#111111] bg-opacity-70 pb-8 tracking-[3px]">
+        <div className="mx-auto max-w-[1500px] text-[#e7e4e4]">
+          <div className="flex flex-col justify-between gap-8 px-2 py-8 sm:px-4 md:flex-row  md:gap-0 md:py-6 xl:px-16 xl:py-8">
+            <div className="flex flex-col items-center md:w-[50%] md:items-start xl:w-[60%]">
               {/* <Image
                 src="/logo.png"
                 alt="footer logo"
@@ -33,12 +32,14 @@ const Footer = () => {
                 height={200}
                 className=""
               ></Image> */}
-              <p className="mt-4 ml-2.5 text-xs lg:text-sm text-center md:text-start">WE ENCOURAGE YOUNG MINDS TO<br />PURSUE KNOWLEDGE AND EXCELLENCE <br />IN UNIQUE WAYS </p>
-              <div className="flex gap-2 mt-8 justify-center md:justify-normal">
-                <Socials
-                  logo={<FaGithub />}
-                  src="https://github.com/mlsa-bitjaipur"
-                />
+              <p className="ml-2.5 mt-4 text-center text-xs md:text-start lg:text-sm">
+                WE ENCOURAGE YOUNG MINDS TO
+                <br />
+                PURSUE KNOWLEDGE AND EXCELLENCE <br />
+                IN UNIQUE WAYS{" "}
+              </p>
+              <div className="mt-8 flex justify-center gap-2 md:justify-normal">
+                <Socials logo={<FaGithub />} src="https://github.com/mlsa-bitjaipur" />
                 {/* <Socials
                   logo={<FaTwitter />}
                   src="https://x.com/mlsakiit"
@@ -59,35 +60,38 @@ const Footer = () => {
                 /> */}
               </div>
             </div>
-            <div className="flex flex-col sm:flex-row md:flex-col gap-8 md:gap-8 lg:flex-row text-center sm:text-start md:text-justify md:w-[300px] lg:w-[40%] sm:justify-around lg:items-center ">
-              <div className="text-xs tracking-[2px] flex flex-col gap-[5px] font-medium items-center sm:items-start">
-                <h1 className="text-base mb-2 font-bold">CONTACT US</h1>
-                <span className="flex items-center gap-2 group">
+            <div className="flex flex-col gap-8 text-center sm:flex-row sm:justify-around sm:text-start md:w-[300px] md:flex-col md:gap-8 md:text-justify lg:w-[40%] lg:flex-row lg:items-center ">
+              <div className="flex flex-col items-center gap-[5px] text-xs font-medium tracking-[2px] sm:items-start">
+                <h1 className="mb-2 text-base font-bold">CONTACT US</h1>
+                <span className="group flex items-center gap-2">
                   <FaPhoneAlt className="group-hover:text-[#0070C5]" />
                   <p>+91 8619777940</p>
                 </span>
-                <span className="flex items-center gap-2 group">
+                <span className="group flex items-center gap-2">
                   <FaPhoneAlt className="group-hover:text-[#0070C5]" />
                   <p>+91 8619056754</p>
                 </span>
-                <span className="flex items-center gap-2 group">
+                <span className="group flex items-center gap-2">
                   <HiMail className="group-hover:text-[#0070C5]" />
                   <p>MlSABITJAIPUR@OUTLOOK.COM</p>
                 </span>
               </div>
-              <div className="flex flex-col gap-1.5 text-xs tracking-[2px] font-medium">
+              <div className="flex flex-col gap-1.5 text-xs font-medium tracking-[2px]">
                 <h1 className="mb-1 text-base font-bold">VISIT US AT</h1>
                 <p className="leading-[20px]">
-                  BIT<br />
-                  JAIPUR<br />
-                  INDIA<br />
+                  BIT
+                  <br />
+                  JAIPUR
+                  <br />
+                  INDIA
+                  <br />
                 </p>
               </div>
             </div>
           </div>
-          <div className="flex justify-center mt-4">
-            <div className="flex flex-col md:flex-row gap-1 md:gap-4 text-xs text-[#9e9b9b] tracking-[2px]">
-              <span className="flex gap-2 items-center justify-center md:justify-start">
+          <div className="mt-4 flex justify-center">
+            <div className="flex flex-col gap-1 text-xs tracking-[2px] text-[#9e9b9b] md:flex-row md:gap-4">
+              <span className="flex items-center justify-center gap-2 md:justify-start">
                 <FaRegCopyright />
                 <p className="text-center">2025 MLSA BIT</p>
               </span>
@@ -98,7 +102,7 @@ const Footer = () => {
         </div>
       </div>
     </>
-  )
+  );
 };
 
 export default Footer;
