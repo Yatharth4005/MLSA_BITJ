@@ -685,7 +685,7 @@ export const OUR_CURRENT_LEADS = [
     message: "",
     facebook: "",
     github: "",
-    linkedIn: "",
+    linkedIn: "https://www.linkedin.com/in/priyanshu-raj-89608b291?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     instagram: "https://www.instagram.com/mr_.priyanshu01/",
   },
   {
