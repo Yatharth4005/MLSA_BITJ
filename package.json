@@ -52,7 +52,8 @@
     "validator": "^13.9.0",
     "zod": "^3.21.4",
     "zod-formik-adapter": "^1.2.0",
-    "zustand": "^4.3.8"
+    "zustand": "^4.3.8",
+    "packageManager": "pnpm@9.15.4"
   },
   "devDependencies": {
     "@types/aos": "^3.0.4",
