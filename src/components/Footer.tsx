@@ -96,7 +96,7 @@ const Footer = () => {
                 <p className="text-center">2025 MLSA BIT</p>
               </span>
               <span className="hidden md:block"> | </span>
-              <p>DESIGNED BY YATHARTH & SHUBH</p>
+              <p>DESIGNED BY MLSA BIT TEAM</p>
             </div>
           </div>
         </div>
