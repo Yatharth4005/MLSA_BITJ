@@ -19,7 +19,7 @@ const EventCard = () => {
             />
             <Image
               alt="image"
-              src="/students2.jpg"
+              src="/students2.JPG"
               width={800}
               height={300}
               className="ml-[0.22rem] mb-[1rem] rounded relative group"
