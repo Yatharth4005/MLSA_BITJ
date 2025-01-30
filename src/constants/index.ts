@@ -698,17 +698,17 @@ export const OUR_CURRENT_LEADS = [
     linkedIn: "https://www.linkedin.com/in/kanishk-upadhyay-9a665628a/",
     instagram: "https://www.instagram.com/_kanishk_upadhyay/",
   },
-  {
-    image: "/Current_Leads/shwetank.jpg",
-    name: "Shwetank Kumar",
-    domain: "Lead Creatives",
-    message: "",
-    facebook: "",
-    github: "https://github.com/sayshwetank",
-    linkedIn:
-      "https://www.linkedin.com/in/shwetank-kumar-844729291?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
-    instagram: "https://www.instagram.com/sayshwetank/",
-  },
+  // {
+  //   image: "/Current_Leads/shwetank.jpg",
+  //   name: "Shwetank Kumar",
+  //   domain: "Lead Creatives",
+  //   message: "",
+  //   facebook: "",
+  //   github: "https://github.com/sayshwetank",
+  //   linkedIn:
+  //     "https://www.linkedin.com/in/shwetank-kumar-844729291?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+  //   instagram: "https://www.instagram.com/sayshwetank/",
+  // },
 
   // {
   //   image: "/Current_Leads/samridhi.png",
