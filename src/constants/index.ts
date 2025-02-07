@@ -732,7 +732,7 @@ export const OUR_CURRENT_LEADS = [
     instagram: "",
   },
   {
-    image: "/Current_Leads/",
+    image: "/Current_Leads/abhishek.jpg",
     name: "Abhishek Pareek",
     domain: "Co-Lead Graphics",
     message: "",
