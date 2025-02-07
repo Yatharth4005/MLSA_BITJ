@@ -699,7 +699,7 @@ export const OUR_CURRENT_LEADS = [
     instagram: "https://www.instagram.com/_kanishk_upadhyay/",
   },
   {
-    image: "/Current_Leads/",
+    image: "/Current_Leads/harshwardhan.jpg",
     name: "Harshwardhan",
     domain: "Lead Socials",
     message: "",
