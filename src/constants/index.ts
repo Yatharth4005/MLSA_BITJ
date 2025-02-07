@@ -704,7 +704,7 @@ export const OUR_CURRENT_LEADS = [
     domain: "Lead Socials",
     message: "",
     facebook: "",
-    github: "",
+    github: "https://github.com/Harshwrdhn",
     linkedIn:
       "https://www.linkedin.com/in/harshwardhan-singh-kumawat-414744311/",
     instagram: "https://www.instagram.com/harshhwardhan__/",
