@@ -711,7 +711,7 @@ export const OUR_CURRENT_LEADS = [
   },
 
   {
-    image: "/Current_Leads/",
+    image: "/Current_Leads/anisha.jpg",
     name: "Anisha Agarwal",
     domain: "Co-Lead Socials",
     message: "",
